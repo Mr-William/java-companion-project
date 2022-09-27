@@ -56,16 +56,16 @@ class Game_Service_ImplTest {
 	@Test
 	void saveGameServiceSavesAndUpdatesGame() {
 		if(gamesToRemoveAfterTest.isEmpty()) {
-			Game game = gameServiceUnderTest.saveGame(testGame);
+			Game game = gameServiceUnderTest.createGame(testGame);
 			Assertions.assertNotNull(game.getId());
 			
 			//updates 
 			game.setName("Testing Game Name Updated" );
-			testGame = gameServiceUnderTest.saveGame(game);
+			testGame = gameServiceUnderTest.createGame(game);
 			assertEquals(game, testGame);	
 			gamesToRemoveAfterTest.add(testGame);
 			//the saveGame works, save another game to setup list operation tests
-			gamesToRemoveAfterTest.add(gameServiceUnderTest.saveGame(createGame(2)));
+			gamesToRemoveAfterTest.add(gameServiceUnderTest.createGame(createGame(2)));
 		}
 	}
 	
@@ -84,7 +84,7 @@ class Game_Service_ImplTest {
 	
 	@Test
   	void retrieveAllGamesServiceReturnsGames() {
-		List<Game> games = gameServiceUnderTest.retrieveAllGames(); 
+		List<Game> games = gameServiceUnderTest.readAllGames(); 
 		assertNotNull(games);
 		assertTrue(games.size() >= 2 );
 	}

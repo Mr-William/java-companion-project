@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
 <%@ taglib tagdir="/WEB-INF/tags" prefix="mgl" %>
     <!DOCTYPE html>
-    <html>
+    <html lang="en">
 
     <head>
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.8/angular.min.js"></script>
@@ -12,7 +12,7 @@
         <!-- Bootstrap CSS -->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-        <title>Mist Library Task 1-Games</title>
+        <title>Mist Game Library - Games</title>
         <style type="text/css">
             body {
             	background-image:
@@ -21,7 +21,7 @@
             	background-size: cover;
             }
         </style>
-        <link rel="apple-touch-icon" sizes="180x180" href="/android-chrome-192x192.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="resources/static/images/android-chrome-192x192.png">
     	<link rel="icon" type="image/png" sizes="32x32" href="resources/static/images/favicon-32x32.png">
     	<link rel="icon" type="image/png" sizes="16x16" href="resources/static/images/favicon-16x16.png">
     </head>
@@ -76,15 +76,14 @@
                             <tr>
                                 <th>Game Name</th>
                                 <th>Game Genre</th>
-                                <th width="20%"></th>
+                                <th>Game Reviews</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr ng-repeat="currentGame in MGL_T1_ctrl.games">
                                 <td><span ng-bind="currentGame.name"></span></td>
                                 <td><span ng-bind="currentGame.genre"></span></td>
-                                <td>
-                                </td>
+                                <td><span ng-bind="currentGame.review"></span></td>
                             </tr>
                         </tbody>
                     </table>

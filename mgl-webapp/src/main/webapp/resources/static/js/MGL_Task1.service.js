@@ -2,9 +2,9 @@
 
 angular.module('MGL_Task1_app').factory('MGL_Task1_Service', ['$http', function($http) {
 
-		var REST_SERVICE_URI = 'game';
+		let REST_SERVICE_URI = 'game';
 
-		var factory = {
+		let factory = {
 			fetchAllGames : fetchAllGames,
 			createGame : createGame
 		};

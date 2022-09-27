@@ -54,12 +54,12 @@ public class GamesReviewsController {
 	
 	@RequestMapping(value = "/game", method = RequestMethod.GET)
 	public ResponseEntity<List<Game>> fetchAllGames() {
-		return new ResponseEntity<List<Game>>(gameService.retrieveAllGames(), HttpStatus.OK);
+		return new ResponseEntity<List<Game>>(gameService.readAllGames(), HttpStatus.OK);
 	}
 
 	@RequestMapping(value = "/game", method = RequestMethod.POST, consumes = MediaType.APPLICATION_JSON_VALUE)
 	public ResponseEntity<Void> createGame(@RequestBody Game game) {
-		gameService.saveGame(game);
+		gameService.createGame(game);
 		return new ResponseEntity<Void>(HttpStatus.CREATED);
 	}
 }

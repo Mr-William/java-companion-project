@@ -2,7 +2,7 @@
 
 angular.module('MGL_Task1_app').controller('MGL_Task1_Controller',
 		[ 'MGL_Task1_Service', function(MGL_Task1_Service) {
-			var self = this;
+			let self = this;
 			self.game = {};
 			self.games = [];
 

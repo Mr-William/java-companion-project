@@ -6,8 +6,14 @@ import com.organization.mvcproject.model.Game;
 
 public interface GameService {
 
-	List<Game> retrieveAllGames();
+	//CRUD Methods
+	Game createGame(Game game);
 
-	Game saveGame(Game game);
+	List<Game> readAllGames();
+	
+	boolean updateGame(Game game);
+	
+	boolean deleteGame(Long gameId);
 
+	boolean deleteGame(String name);
 }

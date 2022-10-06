@@ -1,4 +1,4 @@
-package com.organization.mvcproject.config;
+package com.organization.mvcproject.app.config;
 
 import javax.servlet.ServletContext;
 import javax.servlet.ServletException;

@@ -1,7 +1,9 @@
 
-package com.organization.mvcproject.model;
+package com.organization.mvcproject.app.model;
 
 import java.util.List;
+
+import com.organization.mvcproject.api.model.Game;
 
 public class Company {
 

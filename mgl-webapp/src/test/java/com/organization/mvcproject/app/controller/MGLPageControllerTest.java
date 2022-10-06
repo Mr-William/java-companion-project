@@ -14,9 +14,9 @@ import org.springframework.test.context.web.WebAppConfiguration;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 
-import com.organization.mvcproject.controller.HomeController;
+import com.organization.mvcproject.app.controller.HomeController;
 
-@SpringJUnitConfig(classes = com.organization.mvcproject.config.MGLWebApplicationInitializer.class )
+@SpringJUnitConfig(classes = com.organization.mvcproject.app.config.MGLWebApplicationInitializer.class )
 @WebAppConfiguration
 @TestInstance(Lifecycle.PER_CLASS)
 class MGLPageControllerTest {
